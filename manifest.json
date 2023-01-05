@@ -37,12 +37,21 @@
     "*://basecamp.com/*",
     "https://secure.helpscout.net/mailbox/*",
     "https://*.harvestapp.com/*",
+    "https://*.force.com/*",
+    "https://*.salesforce.com/*",
     "https://github.com/*",
     "webRequest",
     "webRequestBlocking"
   ],
   "content_scripts": [
     {
+      "matches": [ "https://*.force.com/*" ],
+      "js": [
+        "js/profiles/salesforce.js"
+      ],
+       "css": [ "css/salesforce.css" ]
+    },
+     {
       "matches": [ "https://basecamp.com/*" ],
       "js": [
         "js/profiles/basecamp2.js"
